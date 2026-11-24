@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Dev Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <!-- Start screen -->
+    <section id="start" class="screen">
+      <header class="hero">
+        <p class="hero-kicker">&lt;/&gt; Test your skills</p>
+        <h1>Web Dev Quiz</h1>
+        <p class="hero-sub">Pick a topic and answer 5 questions. Every new round brings fresh questions.</p>
+        <div class="chips">
+          <span>15 questions per topic</span>
+          <span>Instant feedback</span>
+          <span>Best score saved</span>
+        </div>
+      </header>
+      <div class="pad">
+        <h2 class="section-title">Choose a topic</h2>
+        <div id="categories" class="categories"></div>
+      </div>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="quiz" class="screen pad hidden">
+      <div class="top">
+        <span id="cat-name" class="tag"></span>
+        <span id="counter"></span>
+      </div>
+      <div class="progress"><div id="bar"></div></div>
+      <h2 id="question" aria-live="polite"></h2>
+      <div id="options" class="options"></div>
+      <button id="next" class="btn primary" disabled>Next question</button>
+    </section>
+
+    <!-- Result screen -->
+    <section id="result" class="screen pad hidden">
+      <h1>Your result</h1>
+      <p id="score" class="score"></p>
+      <p id="message" class="lead"></p>
+      <p id="best" class="small"></p>
+      <h3>Answer review</h3>
+      <ul id="review" class="review"></ul>
+      <div class="row">
+        <button id="retry" class="btn primary">Play new round</button>
+        <button id="home" class="btn">Choose another topic</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
